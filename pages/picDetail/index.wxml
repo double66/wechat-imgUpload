@@ -1,0 +1,39 @@
+<!--pages/picDetail/index.wxml-->
+<view class="wrap">
+    <view class="tle">{{dataInfo.title}}</view>
+    <view class="time">{{dataInfo.time}}</view>
+    <text class="info">{{dataInfo.info}}</text>
+
+
+    <view class="iconBtn">
+        <view class="item" bindtap="bindIcon" data-index="0">
+            <image src="../../common/icon/{{showIndex==0?'icon01_sed':'icon01'}}.png"></image>
+        </view>
+        <view class="item" bindtap="bindIcon" data-index="1">
+            <image src="../../common/icon/{{showIndex==1?'icon02_sed':'icon02'}}.png"></image>
+        </view>
+    </view>
+
+    <view class="slideBox" hidden="{{showIndex==1?false:true}}">
+        <swiper class="slide" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"
+                interval="{{interval}}" duration="{{duration}}"  bindchange="bindchange">
+            <block wx:for="{{dataInfo.picList}}" wx:key="{{index}}">
+                <swiper-item class="slide-item">
+                    <image src="{{item}}" class="slide-image" mode="aspectFit" lazy-load data-index="{{index}}"  bindtap='previewImg' />
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="indexNum">{{current+1+"/"+dataInfo.picList.length}}</view>
+    </view>
+
+    <view class="list" hidden="{{showIndex==0?false:true}}">
+        <block wx:for="{{dataInfo.picList}}" wx:key="{{index}}">
+            <view class="list-item">
+                <image src="{{item}}" class="list-image" mode="aspectFill" lazy-load data-index="{{index}}" bindtap='previewImg' />
+            </view>
+        </block>
+    </view>
+
+
+
+</view>

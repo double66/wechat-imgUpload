@@ -1,0 +1,44 @@
+.wrap{
+  padding: 0 20rpx 100rpx;
+}
+
+.wrap input,.wrap textarea{
+  flex: 1;
+  font-size: 24rpx;
+  line-height: 2;
+  padding: 6rpx 10rpx;
+  border: 1px solid #DEDEDE;
+  border-radius: 4rpx;
+}
+.wrap .input{
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.wrap .input label{
+  padding: 4rpx 0;
+}
+
+
+.btn-area{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+.btn-area button{
+  flex: 1;
+  border-radius: 0;
+}
+.btn-area button.submit{
+  color: #fff;
+  background: rgb(66, 192, 42);
+}
+.btn-area button::after{
+  content: none;
+}
+
+
+/*修改插件样式*/
+
+

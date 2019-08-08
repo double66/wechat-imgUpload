@@ -1,0 +1,87 @@
+/* pages/picDetail/index.wxss */
+.wrap{
+    padding: 10rpx 30rpx;
+}
+.tle{
+    font-size: 32rpx;
+    line-height: 2;
+}
+.time{
+    font-size: 20rpx;
+    color: #aaaaaa;
+}
+.info{
+    font-size: 24rpx;
+    color: #777777;
+    padding: 10rpx 0;
+}
+
+
+
+.iconBtn{
+    display: flex;
+    /*flex-direction: row-reverse;*/
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10rpx;
+}
+.iconBtn .item{
+    width: 40rpx;
+    height: 40rpx;
+    padding: 10rpx;
+}
+.iconBtn image{
+    width: 100%;
+    height: 100%;
+}
+
+
+.slideBox{
+    position: relative;
+}
+.indexNum{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    font-size: 26rpx;
+    line-height: 2;
+    padding: 10rpx 30rpx;
+    border-radius: 0 0 10rpx 10rpx;
+}
+.slide{
+    width: 100%;
+    height: 900rpx;
+    border-radius: 10rpx;
+    border: 1px solid #DEDEDE;
+}
+.slide-item{
+    width: 100%;
+    border-radius: 10rpx;
+}
+.slide-image{
+    width: 100%;
+    height: 900rpx;
+    border-radius: 10rpx;
+}
+
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.list-item{
+    width: 330rpx;
+    height: 440rpx;
+    border-radius: 10rpx;
+    border: 1px solid #DEDEDE;
+    margin-bottom: 30rpx;
+    overflow: hidden;
+}
+.list-image{
+    width: 100%;
+    height: 100%;
+}

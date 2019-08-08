@@ -1,0 +1,20 @@
+<view class="uploadImg">
+    <!--图片预览-->
+    <block wx:if="{{imgList.length>0}}" wx:for="{{imgList}}" wx:key="{{index}}">
+        <view class="uploadItem">
+            <view class="itemBox">
+                <view class="close" bindtap="checkRemove" data-index="{{index}}"></view>
+                <image src="{{item}}" mode="aspectFill"></image>
+            </view>
+        </view>
+    </block>
+    <!--上传按钮-->
+    <block wx:if="{{imgList.length < count}}">
+        <view class="uploadItem">
+            <view class="itemBox checkImg" bindtap="checkImgUpload">
+                <view class="icon"></view>
+                <text class="desc">{{desc}}</text>
+            </view>
+        </view>
+    </block>
+</view>

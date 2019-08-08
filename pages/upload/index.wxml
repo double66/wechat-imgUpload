@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="wrap">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="input">
+      <label>标题：</label>
+      <input name="title" value="" placeholder="标题" />
+    </view>
+    <view class="input">
+      <label>简介：</label>
+      <textarea name="info" value="" placeholder="故事纪要"></textarea>
+    </view>
+    <view class="input">
+      <label>封面：</label>
+      <uploadImg bindaddPic="bindCoverImg" bindremove="bindCoverRemove" count="1" desc="封面图上传" imgList="{{coverImgPreview}}"></uploadImg>
+    </view>
+    <view class="input" style="margin-bottom: 0;">
+      <label>图片集：</label>
+    </view>
+    <view class="input">
+      <uploadImg bindaddPic="bindPicList" bindremove="bindPicRemove" count="9" desc="图片集上传" imgList="{{picList}}"></uploadImg>
+    </view>
+    <view class="btn-area">
+      <button class="submit" form-type="submit">提交</button>
+    </view>
+  </form>
+</view>

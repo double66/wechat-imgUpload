@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="wrap">
+
+  <block wx:if="{{dataList.length>0}}"  wx:for="{{dataList}}" wx:key="{{index}}" wx:for-item="item">
+    <view class="item" bindtap="bindDetail" data-id="{{item._id}}">
+      <view class="tle">{{item.title}}</view>
+      <view class="time">{{item.time}}</view>
+      <view class="info">{{item.info}}</view>
+      <block wx:for="{{item.coverImg}}" wx:for-item="img" wx:key="{{index}}">
+        <image src="{{img}}" mode="aspectFill"></image>
+      </block>
+    </view>
+  </block>
+
+  <block wx:if="{{dataList.length<=0}}">啥都没有o(╯□╰)o</block>
+
+</view>
